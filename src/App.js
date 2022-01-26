@@ -1,4 +1,4 @@
-import './styles.css';
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Pokedex from './containers/Pokedex';
 import AppNavigator from './components/AppNavigator';
