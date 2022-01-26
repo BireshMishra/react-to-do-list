@@ -10,8 +10,8 @@ export default () => {
       <BrowserRouter>
         <AppNavigator />
         <Routes>
-          <Route path="/" element={<Pokedex />} />
-          <Route path="/pokemon/:id" element={<PokemonDetails />} />
+          <Route exact path="/" element={<Pokedex />} />
+          <Route exact path="/pokemon/:id" element={<PokemonDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
