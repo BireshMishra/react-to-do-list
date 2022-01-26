@@ -1,11 +1,19 @@
-import React from "react";
-import "./style.css";
+import './styles.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Pokedex from './containers/Pokedex';
+import AppNavigator from './components/AppNavigator';
+import PokemonDetails from './containers/PokemonDetails';
 
-export default function App() {
+export default () => {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+    <div className="App">
+      <BrowserRouter>
+        <AppNavigator />
+        <Routes>
+          <Route path="/" element={<Pokedex />} />
+          <Route path="/pokemon/:id" element={<PokemonDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
